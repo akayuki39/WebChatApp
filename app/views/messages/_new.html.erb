@@ -1,5 +1,5 @@
 <!-- room在这里被传进来了，所以rails知道新建的message所属的room是什么 -->
 <%= form_for [room, Message.new], remote: true do |f| %>
-  <%= f.text_area :content, size: '50x20' %><br>
+  <%= f.text_area :content, size: '30x5' %><br>
   <%= f.submit 'Post comment' %>
 <% end %>

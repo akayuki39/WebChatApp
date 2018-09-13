@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_room
 
   def create
-    @message = Message.create! content: params[:message][:content], message: @message, user: @current_user
+    @message = Message.create! content: params[:message][:content], room: @room, user: current_user
   end
 
   private

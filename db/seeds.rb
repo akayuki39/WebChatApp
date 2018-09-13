@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!([
+user = User.create!([
 {name: "Lewis"}
+{name: "Joe"}
 ])
 
-Room.create!([
-{title: "First room", content: "This is the first room", user_id: 1}
+user[0].room.create!([
+{title: "First room", content: "First room"}
 ])
